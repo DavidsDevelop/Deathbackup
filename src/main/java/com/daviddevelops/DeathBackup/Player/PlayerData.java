@@ -1,4 +1,4 @@
-package com.daviddevelops.PROJECT_NAME.Player;
+package com.daviddevelops.DeathBackup.Player;
 
 public class PlayerData {
 
