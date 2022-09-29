@@ -4,3 +4,12 @@ version: 0.1
 author: David
 depend: [Vault, WorldGuard]
 description: Deathbackup
+api-version: 1.18
+commands:
+  adbp:
+    description: Access past lives inventories
+    aliases:
+      - admindeathbackup
+      - admindeathbackpack
+    permission: adbp.admin
+    permission-message: You do not have permission!

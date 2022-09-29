@@ -4,10 +4,17 @@ package com.daviddevelops.DeathBackup.Utility;
 import com.daviddevelops.DeathBackup.Commands.CommandHandler;
 import com.daviddevelops.DeathBackup.Events.EventHandler;
 import com.daviddevelops.DeathBackup.Player.PlayerHandler;
+import com.iridium.iridiumcolorapi.IridiumColorAPI;
+import com.daviddevelops.DeathBackup.InventoryAPI.ClickableItem;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.util.io.BukkitObjectInputStream;
 import org.bukkit.util.io.BukkitObjectOutputStream;
@@ -16,16 +23,26 @@ import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Utility {
 
+    private static Utility single_inst = null;
     Plugin plugin; PlayerHandler playerHandler; CommandHandler commandHandler; EventHandler eventHandler;
 
     public Utility(Plugin plugin){
+        single_inst = this;
         this.plugin = plugin;
         this.playerHandler = registerPlayerHandler(this);
         this.commandHandler = registerCommandHandler(this);
         this.eventHandler = registerEventHandler(this);
+    }
+
+//    --[ Instance Creation ]--
+
+    public static Utility getInstance() {
+        return single_inst;
     }
 
 //    --[ Class command registration  ]--
@@ -35,7 +52,7 @@ public class Utility {
     }
 
     private CommandHandler registerCommandHandler(Utility utility) {
-        return new CommandHandler();
+        return new CommandHandler(utility);
     }
 
     private PlayerHandler registerPlayerHandler(Utility utility) {
@@ -146,6 +163,48 @@ public class Utility {
         }.parse();
     }
 
+    public ClickableItem registerItem(ItemStack itemStack, String s) {
+        ItemMeta meta = itemStack.getItemMeta();
+        meta.setDisplayName(translateColors(s));
+        itemStack.setItemMeta(meta);
+        return ClickableItem.empty(itemStack);
+    }
+
+//    --[ Item & Color Functions  ]--
+    public ClickableItem registerItem(ItemStack itemStack, String s, List<String> l) {
+        ItemMeta meta = itemStack.getItemMeta();
+        meta.setDisplayName(translateColors(s));
+        meta.setLore(translateColors(l));
+        itemStack.setItemMeta(meta);
+        return ClickableItem.empty(itemStack);
+    }
+
+    public ItemStack recolorItem(ItemStack itemStack, String s, List<String> l) {
+        ItemMeta meta = itemStack.getItemMeta();
+        meta.setDisplayName(translateColors(s));
+        meta.setLore(translateColors(l));
+        itemStack.setItemMeta(meta);
+        return itemStack;
+    }
+
+    public ItemStack recolorItem(ItemStack itemStack, String s) {
+        ItemMeta meta = itemStack.getItemMeta();
+        meta.setDisplayName(translateColors(s));
+        itemStack.setItemMeta(meta);
+        return itemStack;
+    }
+
+    public String translateColors(String s){
+        return IridiumColorAPI.process(s);
+    }
+
+    private List<String> translateColors(List<String> s){
+        List<String> newList = new ArrayList<>();
+        for(String msg : s){
+            newList.add(translateColors(msg));
+        }
+        return newList;
+    }
 
 //    --[ Inventory Functions  ]--
     public static String[] playerInventoryToBase64(PlayerInventory playerInventory) throws IllegalStateException {
@@ -230,4 +289,36 @@ public class Utility {
         }
     }
 
+    public List<ItemStack> inventoryFromConfig(String ID, Player player){
+        FileConfiguration FC = ConfigHandler.getInstance().getConfig("playerData.yml");
+        List<String> test = (List<String>) ConfigHandler.getInstance().getList(FC, player.getName() + "." + ID + ".Inventory");
+        List<ItemStack> inventory = new ArrayList<>();
+        try {
+            ItemStack items[] = Utility.itemStackArrayFromBase64(test.get(0));
+            ItemStack armors[] = Utility.itemStackArrayFromBase64(test.get(1));
+            inventory.addAll(Arrays.asList(items));
+            inventory.addAll(Arrays.asList(armors));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+//        for(ItemStack item : inventory){
+//            if(item != null){
+//                player.getInventory().addItem(item);
+//            }
+//        }
+        return inventory;
+    }
+
+    public static void inventoryToConfig(PlayerInventory inventory, EntityDamageEvent lastDamageCause, Location location){
+        // Save to Config + Generate ID
+        String base64[] = Utility.playerInventoryToBase64(inventory);
+        UUID uuid = UUID.nameUUIDFromBytes(base64[0].getBytes());
+        FileConfiguration FC = ConfigHandler.getInstance().getConfig("playerData.yml");
+        Date now = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        ConfigHandler.getInstance().setData(FC, inventory.getHolder().getName() + "." + uuid.toString() + ".Time", format.format(now).toString());
+        ConfigHandler.getInstance().setData(FC, inventory.getHolder().getName() + "." + uuid.toString() + ".Cause", lastDamageCause.getEventName().toString());
+        ConfigHandler.getInstance().addLocation(FC,  location, inventory.getHolder().getName() + "." + uuid.toString() + ".Location");
+        ConfigHandler.getInstance().setData(FC, inventory.getHolder().getName() + "." + uuid.toString() + ".Inventory", base64);
+    }
 }

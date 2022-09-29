@@ -5,20 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcfd845b-8e9b-4dd0-a400-782462d00350" name="Changes" comment="Base Upload">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Commands/SubCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/GUIs/DeathItemDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/GUIs/PlayerDeathInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/GUIs/PlayerSelectionInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/playerData.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Commands/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Commands/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/DeathbackupPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/DeathbackupPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Events/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Events/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Utility/ConfigHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Utility/ConfigHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Utility/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Utility/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+    <option name="jreName" value="15" />
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="2FPSPjWL7ywNdWnFgCR7U9GI84g" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -28,20 +55,29 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/bubby/Downloads/JetBrains-Discord-Integration-1.10.0.zip",
-    "project.structure.last.edited": "Artifacts",
+    "last_opened_file_path": "C:/Users/bubby/IdeaProjects/Deathbackup/src/main/resources/archetype-resources",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bubby\IdeaProjects\Deathbackup\src\main\resources\archetype-resources" />
       <recent name="C:\Users\bubby\IdeaProjects\SpigotPluginTemplate\src\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bubby\IdeaProjects\Deathbackup\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.daviddevelops.DeathBackup.GUIs" />
     </key>
   </component>
   <component name="RunManager">
@@ -67,7 +103,11 @@
       <updated>1664392207440</updated>
       <workItem from="1664392219212" duration="461000" />
       <workItem from="1664392698620" duration="809000" />
-      <workItem from="1664453223437" duration="2884000" />
+      <workItem from="1664453223437" duration="8834000" />
+      <workItem from="1664462121162" duration="4330000" />
+      <workItem from="1664466967327" duration="2317000" />
+      <workItem from="1664469491635" duration="3028000" />
+      <workItem from="1664473126626" duration="6518000" />
     </task>
     <task id="LOCAL-00001" summary="Base Upload">
       <created>1664455615393</created>
@@ -76,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664455615393</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Base Upload">
+      <created>1664456118253</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664456118253</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
