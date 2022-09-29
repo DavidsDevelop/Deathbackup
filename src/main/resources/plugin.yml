@@ -1,0 +1,6 @@
+name: Deathbackup
+main: com.daviddevelops.DeathBackup.DeathbackupPlugin
+version: 0.1
+author: David
+depend: [Vault, WorldGuard]
+description: Deathbackup

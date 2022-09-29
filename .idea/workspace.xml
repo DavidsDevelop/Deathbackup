@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcfd845b-8e9b-4dd0-a400-782462d00350" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="dcfd845b-8e9b-4dd0-a400-782462d00350" name="Changes" comment="Base Upload">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Commands/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/EntityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Entity/EntityHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Events/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Events/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/PlayerDataValuesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Exceptions/PlayerDataValuesException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUIs/GUIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/GUIs/GUIManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/ItemCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Items/ItemCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/ItemManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Items/ItemManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Items/ModelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/TextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Items/TextureManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player/PlayerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Player/PlayerData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player/PlayerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Player/PlayerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Temp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/DeathbackupPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utility/ConfigHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Utility/ConfigHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utility/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/daviddevelops/DeathBackup/Utility/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +33,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/bubby/Downloads/JetBrains-Discord-Integration-1.10.0.zip",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,8 +67,16 @@
       <updated>1664392207440</updated>
       <workItem from="1664392219212" duration="461000" />
       <workItem from="1664392698620" duration="809000" />
-      <workItem from="1664453223437" duration="2110000" />
+      <workItem from="1664453223437" duration="2884000" />
     </task>
+    <task id="LOCAL-00001" summary="Base Upload">
+      <created>1664455615393</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664455615393</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,5 +92,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Base Upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base Upload" />
   </component>
 </project>
